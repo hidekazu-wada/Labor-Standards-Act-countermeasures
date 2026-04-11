@@ -1,6 +1,6 @@
 # プロジェクトコンテキスト
 
-**最終更新:** 2026-04-10
+**最終更新:** 2026-04-11
 **用途:** このファイルを外部LLM（特に監査役のChatGPT）に渡すだけで、プロジェクト全体を理解できることを目指す。
 
 > **データガバナンス注意:** このファイルは外部LLMに渡される前提のため、**会社名・個人名（役員・スタッフ）・社内政治情報**は記載しない。役職表記・抽象表現に置換すること。
@@ -42,7 +42,9 @@
 
 - 初期化ヒアリング完了（2026-04-10）
 - 目的・体制・成果物・成功指標・撤退方針を確定し、PROJECT.md に集約
-- 現在は **フェーズ1: リサーチ＆ドキュメント整備** の入口
+- Perplexity向けリサーチプロンプトをChatGPT（監査役）がレビュー → 6項目改善後にPerplexityに投入
+- **Perplexityリサーチ結果を受領・保存済み（2026-04-11）** → `doc/research/2026-04-11-labor-standards-research.md`
+- 現在は **フェーズ1: リサーチ＆ドキュメント整備** — リサーチ結果の品質確認段階
 
 ---
 
@@ -144,7 +146,11 @@ Labor-Standards-Act-countermeasures/
 ├── CLAUDE.md               # Claude Code用指示書
 └── doc/
     ├── project-context.md      # このファイル（外部LLM向け要約）
-    └── evaluation-template.md  # 監査役依頼テンプレート
+    ├── evaluation-template.md  # 監査役依頼テンプレート
+    ├── research/
+    │   └── 2026-04-11-labor-standards-research.md  # Perplexityリサーチ結果
+    └── audits/
+        └── 2026-04-10-research-prompt-review.md    # プロンプト監査記録
 ```
 
 ---
