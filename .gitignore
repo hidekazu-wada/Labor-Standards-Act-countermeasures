@@ -31,3 +31,6 @@ logs/*
 *.key
 *.pem
 credentials.*
+
+# 会社の実データ（外部に出さない。git管理しない）
+求人票.pdf

@@ -31,7 +31,7 @@
 
 - **Claude Code（オーナー）** — 正本（PROJECT.md, doc/）の更新権限を持つ唯一のLLM。ドキュメント作成・全体管理
 - **Perplexity（スカウト）** — 労基法・判例・他社事例のリサーチ。提案までで正本は更新しない
-- **ChatGPT（監査役）** — 役員向け資料の第三者レビュー。`doc/evaluation-template.md` + `doc/project-context.md` を渡す
+- **ChatGPT（監査役）** — 役員向け資料の第三者レビュー。`doc/03_LLMレビュー用/evaluation-template.md` + `doc/03_LLMレビュー用/project-context.md` を渡す
 
 ---
 
@@ -41,10 +41,15 @@
 |---------|------|------|
 | PROJECT.md | オーナー / Claude Code | プロジェクト正本 |
 | CLAUDE.md | Claude Code | 自動読み込み指示書（このファイル） |
-| doc/project-context.md | 監査役（ChatGPT） | 評価用コンテキスト |
-| doc/evaluation-template.md | 監査役（ChatGPT） | 評価依頼テンプレート |
+| README.md | オーナー | フォルダ案内（どのファイルが何か） |
+| doc/01_役員会議/労務まわりの現状確認と整えておきたいこと.md | 役員各位 | 役員会議で共有する説明資料 |
+| doc/02_社内資料/社内事実確認シート.md | オーナー | 社内限定・事実確認（回答反映済み） |
+| doc/02_社内資料/リスク評価メモ.md | オーナー | 論点別リスク再評価 |
+| doc/03_LLMレビュー用/project-context.md | 監査役（ChatGPT） | 評価用コンテキスト |
+| doc/03_LLMレビュー用/evaluation-template.md | 監査役（ChatGPT） | 評価依頼テンプレート |
 
 **原則:** 正本は常にgit側。外部LLMやツールのワークスペースは実行環境であり正本ではない。
+**フォルダ規約:** 番号付きフォルダは読者・用途で分ける。役員が開くのは常に `01_役員会議/`。
 
 ---
 
@@ -73,5 +78,5 @@
 
 - **記録を残す:** 見送りも含めて全ての判断を PROJECT.md の「重要な設計判断の履歴」に追記する
 - **撤退条件はチェックポイント方式:** 数値で切らず、CP1〜CP3 で立ち止まって判断する（PROJECT.md 参照）
-- **ドキュメントの整合性:** PROJECT.md と doc/project-context.md は同期させる。重要な変更時は両方を確認
+- **ドキュメントの整合性:** PROJECT.md と doc/03_LLMレビュー用/project-context.md は同期させる。重要な変更時は両方を確認
 - **コミットは指示があったときだけ:** 勝手にコミットしない
